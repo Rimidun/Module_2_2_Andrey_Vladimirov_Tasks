@@ -2,7 +2,7 @@ package project.controllers;
 
 import project.entity.Post;
 import project.service.PostService;
-import project.service.impl.PostServiceImpl;
+import project.service.imp.PostServiceImpl;
 
 import java.util.List;
 

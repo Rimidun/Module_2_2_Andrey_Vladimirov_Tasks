@@ -1,4 +1,4 @@
-package project.service.impl;
+package project.service.imp;
 
 import project.entity.Label;
 import project.entity.Post;
@@ -7,9 +7,9 @@ import project.entity.dto.WriterDto;
 import project.repository.LabelRepository;
 import project.repository.PostRepository;
 import project.repository.WriterRepository;
-import project.repository.impl.LabelRepositoryImpl;
-import project.repository.impl.PostRepositoryImpl;
-import project.repository.impl.WriterRepositoryImpl;
+import project.repository.imp.LabelRepositoryImpl;
+import project.repository.imp.PostRepositoryImpl;
+import project.repository.imp.WriterRepositoryImpl;
 import project.service.UserService;
 
 import java.util.List;

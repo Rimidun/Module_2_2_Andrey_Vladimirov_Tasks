@@ -66,7 +66,7 @@ public class UserMenu {
         System.out.println("[2] Поиск по фамилии.");
         System.out.println("[3] Поиск по имени и фамилии.");
         System.out.println("[4] Поиск по контенту.");
-        System.out.println("[5] Поиск по региону.");
+        System.out.println("[5] Поиск по тегу.");
         System.out.println("[6] Выйти в главное меню.");
         System.out.println("[0] Выход.");
 

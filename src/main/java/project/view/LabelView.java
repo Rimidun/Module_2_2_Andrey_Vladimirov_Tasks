@@ -52,7 +52,7 @@ public class LabelView {
     public Label save() {
         Label label = labelController.save(createLabelDialog());
         if (label.getId() != null) {
-            System.out.println(ANSI_GREEN + "Регион: " + toString(label) + " сохранен." + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "Тег: " + toString(label) + " сохранен." + ANSI_RESET);
         } else System.err.println("Не удалось сохранить.");
 
         return label;
@@ -60,11 +60,11 @@ public class LabelView {
 
     public Label createLabelDialog() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите регион: ");
+        System.out.print("Введите тег: ");
         String label = sc.nextLine();
         while (!matchLabel(label)) {
-            System.err.print("Вы ошиблись в написании региона, попробуйте еще раз.");
-            System.out.print("Введите регион: ");
+            System.err.print("Вы ошиблись в написании тега, попробуйте еще раз.");
+            System.out.print("Введите тег: ");
             label = sc.nextLine();
         }
         return new Label(null, label);

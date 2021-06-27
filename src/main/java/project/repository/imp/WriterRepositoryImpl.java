@@ -1,4 +1,4 @@
-package project.repository.impl;
+package project.repository.imp;
 
 import project.entity.Label;
 import project.entity.Post;

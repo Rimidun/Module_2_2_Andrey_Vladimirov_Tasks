@@ -2,7 +2,7 @@ package project.controllers;
 
 import project.entity.Writer;
 import project.service.WriterService;
-import project.service.impl.WriterServiceImpl;
+import project.service.imp.WriterServiceImpl;
 
 public class WriterController {
     private final WriterService writerService;

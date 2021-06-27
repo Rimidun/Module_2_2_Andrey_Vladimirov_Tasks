@@ -91,7 +91,7 @@ public class WriterView {
                 break;
             }
             case 5: {
-                System.out.print("Введите регион пользователя: ");
+                System.out.print("Введите тег пользователя: ");
                 String label = matchName();
                 Label find = labelView.getLabel(label);
                 System.out.println(writerController.getByLabel(find.getId()));
@@ -143,7 +143,7 @@ public class WriterView {
         if (!input.equals("")) {
             writer.setLastName(input);
         }
-        System.out.print("Введите регион: ");
+        System.out.print("Введите тег: ");
         input = sc.nextLine();
         Label label = new Label(input);
 
@@ -189,7 +189,7 @@ public class WriterView {
                 .append("id: " + "\"" + writer.getId() + "\"" + "\n")
                 .append("Имя: " + "\"" + writer.getFirstName() + "\"" + "\n")
                 .append("Фамилия: " + "\"" + writer.getLastName() + "\"" + "\n")
-                .append("Регион: " + "\"" + writer.getLabel().getName() + "\"" + "\n")
+                .append("Тег: " + "\"" + writer.getLabel().getName() + "\"" + "\n")
                 .append("Публикации: \n")
                 .append(postView.toString(writer.getPosts()));
 

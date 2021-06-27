@@ -2,7 +2,7 @@ package project.controllers;
 
 import project.entity.Label;
 import project.service.LabelService;
-import project.service.impl.LabelServiceImpl;
+import project.service.imp.LabelServiceImpl;
 
 public class LabelController {
     private final LabelService labelService;

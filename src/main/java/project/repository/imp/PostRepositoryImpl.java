@@ -1,4 +1,4 @@
-package project.repository.impl;
+package project.repository.imp;
 
 import project.entity.Post;
 import org.slf4j.Logger;
