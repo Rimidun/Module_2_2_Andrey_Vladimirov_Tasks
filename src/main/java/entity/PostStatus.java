@@ -1,4 +1,5 @@
 package entity;
 
-public class PostStatus {
+public enum PostStatus {
+    ACTIVE, UNDER_REVIEW, DELETED
 }
