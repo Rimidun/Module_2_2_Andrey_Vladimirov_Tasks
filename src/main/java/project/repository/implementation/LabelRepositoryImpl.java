@@ -1,6 +1,6 @@
-package project.repository.imp;
+package project.repository.implementation;
 
-import project.entity.Label;
+import project.entities.Label;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.repository.DBUtils;

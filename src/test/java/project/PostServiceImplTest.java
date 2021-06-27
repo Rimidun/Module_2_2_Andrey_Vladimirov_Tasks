@@ -8,8 +8,8 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import project.entity.Post;
-import project.service.imp.PostServiceImpl;
+import project.entities.Post;
+import project.service.implementation.PostServiceImpl;
 
 import java.util.Date;
 import java.util.List;

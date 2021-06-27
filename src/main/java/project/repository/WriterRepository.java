@@ -1,6 +1,6 @@
 package project.repository;
 
-import project.entity.Writer;
+import project.entities.Writer;
 
 public interface WriterRepository extends GenericRepository<Writer, Long> {
 

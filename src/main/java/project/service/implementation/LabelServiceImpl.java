@@ -1,8 +1,8 @@
-package project.service.imp;
+package project.service.implementation;
 
-import project.entity.Label;
+import project.entities.Label;
 import project.repository.LabelRepository;
-import project.repository.imp.LabelRepositoryImpl;
+import project.repository.implementation.LabelRepositoryImpl;
 import project.service.LabelService;
 
 public class LabelServiceImpl implements LabelService {

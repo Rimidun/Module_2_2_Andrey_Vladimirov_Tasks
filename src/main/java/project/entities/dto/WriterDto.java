@@ -1,8 +1,8 @@
-package project.entity.dto;
+package project.entities.dto;
 
-import project.entity.Label;
-import project.entity.Post;
-import project.entity.Writer;
+import project.entities.Label;
+import project.entities.Post;
+import project.entities.Writer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

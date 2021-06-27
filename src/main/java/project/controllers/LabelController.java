@@ -1,8 +1,8 @@
 package project.controllers;
 
-import project.entity.Label;
+import project.entities.Label;
 import project.service.LabelService;
-import project.service.imp.LabelServiceImpl;
+import project.service.implementation.LabelServiceImpl;
 
 public class LabelController {
     private final LabelService labelService;

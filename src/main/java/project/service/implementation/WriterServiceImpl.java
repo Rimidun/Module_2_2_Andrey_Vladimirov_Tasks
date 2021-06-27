@@ -1,8 +1,8 @@
-package project.service.imp;
+package project.service.implementation;
 
-import project.entity.Writer;
+import project.entities.Writer;
 import project.repository.WriterRepository;
-import project.repository.imp.WriterRepositoryImpl;
+import project.repository.implementation.WriterRepositoryImpl;
 import project.service.WriterService;
 
 public class WriterServiceImpl implements WriterService {

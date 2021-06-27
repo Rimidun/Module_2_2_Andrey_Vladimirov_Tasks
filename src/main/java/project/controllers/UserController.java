@@ -1,8 +1,8 @@
 package project.controllers;
 
-import project.entity.dto.WriterDto;
+import project.entities.dto.WriterDto;
 import project.service.UserService;
-import project.service.imp.UserServiceImpl;
+import project.service.implementation.UserServiceImpl;
 
 public class UserController {
     private final UserService userService;

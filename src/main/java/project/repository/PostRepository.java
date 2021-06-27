@@ -1,6 +1,6 @@
 package project.repository;
 
-import project.entity.Post;
+import project.entities.Post;
 
 import java.util.List;
 

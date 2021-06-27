@@ -1,7 +1,7 @@
-package project.view;
+package project.appearance;
 
 import project.controllers.LabelController;
-import project.entity.Label;
+import project.entities.Label;
 
 import java.util.Scanner;
 

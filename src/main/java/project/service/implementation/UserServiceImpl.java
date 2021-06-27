@@ -1,15 +1,15 @@
-package project.service.imp;
+package project.service.implementation;
 
-import project.entity.Label;
-import project.entity.Post;
-import project.entity.Writer;
-import project.entity.dto.WriterDto;
+import project.entities.Label;
+import project.entities.Post;
+import project.entities.Writer;
+import project.entities.dto.WriterDto;
 import project.repository.LabelRepository;
 import project.repository.PostRepository;
 import project.repository.WriterRepository;
-import project.repository.imp.LabelRepositoryImpl;
-import project.repository.imp.PostRepositoryImpl;
-import project.repository.imp.WriterRepositoryImpl;
+import project.repository.implementation.LabelRepositoryImpl;
+import project.repository.implementation.PostRepositoryImpl;
+import project.repository.implementation.WriterRepositoryImpl;
 import project.service.UserService;
 
 import java.util.List;

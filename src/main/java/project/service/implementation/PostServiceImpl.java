@@ -1,8 +1,8 @@
-package project.service.imp;
+package project.service.implementation;
 
-import project.entity.Post;
+import project.entities.Post;
 import project.repository.PostRepository;
-import project.repository.imp.PostRepositoryImpl;
+import project.repository.implementation.PostRepositoryImpl;
 import project.service.PostService;
 
 import java.util.List;

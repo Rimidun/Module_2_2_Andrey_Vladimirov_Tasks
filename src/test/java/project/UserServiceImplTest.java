@@ -8,10 +8,10 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import project.entity.Label;
-import project.entity.Post;
-import project.entity.dto.WriterDto;
-import project.service.imp.UserServiceImpl;
+import project.entities.Label;
+import project.entities.Post;
+import project.entities.dto.WriterDto;
+import project.service.implementation.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.Date;
