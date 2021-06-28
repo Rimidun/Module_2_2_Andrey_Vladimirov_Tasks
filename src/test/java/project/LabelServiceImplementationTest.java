@@ -14,7 +14,7 @@ import project.service.implementation.LabelServiceImpl;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-public class LabelServiceImplTest {
+public class LabelServiceImplementationTest {
 
     @Spy
     @InjectMocks

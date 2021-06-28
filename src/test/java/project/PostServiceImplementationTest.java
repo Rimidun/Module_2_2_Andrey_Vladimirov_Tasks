@@ -17,7 +17,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-class PostServiceImplTest {
+class PostServiceImplementationTest {
 
     @Spy
     @InjectMocks
