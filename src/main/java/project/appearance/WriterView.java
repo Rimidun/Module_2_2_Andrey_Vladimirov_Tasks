@@ -31,7 +31,7 @@ public class WriterView {
     public void createUserDialog() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter your username: ");
+        System.out.print("Enter first name: ");
         String firstName = matchName();
 
         System.out.print("Enter the last name of the user: ");
@@ -60,14 +60,14 @@ public class WriterView {
     public void searchUserDialog(int select) {
         switch (select) {
             case 1: {
-                System.out.print("Enter your username: ");
+                System.out.print("Enter first name: ");
                 String firstName = matchName();
                 Writer find = writerController.getByFirstName(firstName);
                 System.out.println(find);
                 break;
             }
             case 2: {
-                System.out.print("Enter your username: ");
+                System.out.print("Enter first name: ");
                 String lastName = matchName();
                 Writer find = writerController.getByLastName(lastName);
                 System.out.println(find);
