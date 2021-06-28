@@ -20,11 +20,11 @@ public class PostRepositoryImpl implements PostRepository {
         try (Statement st = DBUtils.getStatement()) {
             int row = st.executeUpdate(String.format(DBUtils.SAVE_POST, entity.getWritersId(), entity.getContent()), Statement.RETURN_GENERATED_KEYS);
             if (row == 0) {
-                log.warn("IN save - Запись " + entity + " не сохранена.");
+                log.warn("IN save - Note " + entity + " not saved.");
                 return null;
             }
             if (row > 1) {
-                log.warn("IN save - Сохранение " + entity + " затронуло другие записи.");
+                log.warn("IN save - Save " + entity + " affected other notes.");
             }
             try (ResultSet rs = st.getGeneratedKeys()) {
                 if (rs.next()) {
@@ -91,11 +91,11 @@ public class PostRepositoryImpl implements PostRepository {
         try (Statement st = DBUtils.getStatement()) {
             int row = st.executeUpdate(String.format(DBUtils.UPDATE_POST, post.getContent(), post.getId()));
             if (row == 0) {
-                log.warn("IN update - Не удалось обновить запись  " + post + ".");
+                log.warn("IN update - Failed to update note  " + post + ".");
                 return null;
             }
             if (row > 1) {
-                log.warn("IN update - Обновление записи  " + post + " затронуло другие записи.");
+                log.warn("IN update - Note update  " + post + " affected other notes.");
             }
 
             return post;
@@ -110,10 +110,10 @@ public class PostRepositoryImpl implements PostRepository {
         try (Statement st = DBUtils.getStatement()) {
             int row = st.executeUpdate(String.format(DBUtils.DELETE_POST, id));
             if (row == 0) {
-                log.warn("IN remove - Запись с id" + id + " не удалена.");
+                log.warn("IN remove - Note with id" + id + " not deleted.");
             }
             if (row > 1) {
-                log.warn("IN remove - Удаление записи с id  " + id + " затронуло другие записи.");
+                log.warn("IN remove - Delete note with id  " + id + " affected other notes.");
             }
         } catch (SQLException e) {
             e.printStackTrace();

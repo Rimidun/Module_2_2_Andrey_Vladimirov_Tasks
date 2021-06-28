@@ -34,13 +34,13 @@ public class PostView {
 
     public void update() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите контент для редактирования: ");
+        System.out.print("Enter content to edit: ");
         String searchPost = sc.nextLine();
-        System.out.print("Запись для редактирования: ");
+        System.out.print("Record for editing: ");
         Post find = get(searchPost);
-        System.out.print("Введите новое значение: ");
+        System.out.print("Enter new value: ");
         String updatePostContent = sc.nextLine();
-        System.out.print(ANSI_RED + "Существующая запись будет заменена на \"" +
+        System.out.print(ANSI_RED + "The existing entry will be replaced with \"" +
                 updatePostContent + "\"" +
                 " (Y/N): " +
                 ANSI_RESET);
@@ -51,25 +51,25 @@ public class PostView {
             Post result = postController.update(find);
             if (result != null) {
                 System.out.println(ANSI_GREEN +
-                        "Запись отредактирована на: " + result +
+                        "Post edited to: " + result +
                         ANSI_RESET);
             }
-        } else System.out.println("Редактирование отменено пользователем.");
+        } else System.out.println("Editing canceled by user.");
 
         sc.close();
     }
 
     public void save() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите id создателя.");
+        System.out.println("Enter creator id.");
         Long writersId = sc.nextLong();
-        System.out.print("Введите публикацию: ");
+        System.out.print("Enter post: ");
         List<Post> posts = createPostDialog(writersId);
         posts = posts.stream()
                 .peek(postController::save)
                 .collect(Collectors.toList());
 
-        System.out.println(ANSI_GREEN + "Контент: " + toString(posts) + " сохранен." + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "Content: " + toString(posts) + " saved." + ANSI_RESET);
         sc.close();
     }
 
@@ -77,12 +77,12 @@ public class PostView {
         Scanner sc = new Scanner(System.in);
         List<Post> posts = new ArrayList<>();
 
-        System.out.println("Введите публикацию(и), или Enter для завершения ввода: ");
-        System.out.print("Введите публикацию №" + (posts.size() + 1) + ": ");
+        System.out.println("Enter publication (s), or Enter to complete input: ");
+        System.out.print("Enter post №" + (posts.size() + 1) + ": ");
         String content;
         while (!(content = sc.nextLine()).equals("")) {
             posts.add(new Post(writerId, content));
-            System.out.print("Введите публикацию №" + (posts.size() + 1) + ": ");
+            System.out.print("Enter post №" + (posts.size() + 1) + ": ");
         }
 
         return posts;

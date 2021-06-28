@@ -23,11 +23,11 @@ public class WriterRepositoryImpl implements WriterRepository {
             int affect = st.executeUpdate(String.format(DBUtils.SAVE_WRITER, writer.getLabels_id(), writer.getFirstName(), writer.getLastName()),
                     Statement.RETURN_GENERATED_KEYS);
             if (affect == 0) {
-                log.warn("IN save - Запись " + writer + " не сохранена.");
+                log.warn("IN save - Note " + writer + " not saved.");
                 return null;
             }
             if (affect > 1) {
-                log.warn("IN save - Сохранение " + writer + " затронуло другие записи.");
+                log.warn("IN save - SAVE " + writer + " affected other notes.");
             }
             try (ResultSet rs = st.getGeneratedKeys()) {
                 if (rs.next()) {
@@ -74,11 +74,11 @@ public class WriterRepositoryImpl implements WriterRepository {
             );
 
             if (affected == 0) {
-                log.warn("IN update - Не удалось обновить запись  " + writer + ".");
+                log.warn("IN update - Failed to update note  " + writer + ".");
                 return null;
             }
             if (affected > 1) {
-                log.warn("IN update - Обновление записи  " + writer + " затронуло другие записи.");
+                log.warn("IN update - Note update  " + writer + " affected other notes.");
             }
 
             return writer;

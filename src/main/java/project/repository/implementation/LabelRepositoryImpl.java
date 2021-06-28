@@ -25,18 +25,18 @@ public class LabelRepositoryImpl implements LabelRepository {
                     Statement.RETURN_GENERATED_KEYS
             );
             if (row == 0) {
-                log.warn("IN save - Запись " + entity + " не сохранена.");
+                log.warn("IN save - Note " + entity + " not saved.");
                 return null;
             }
             if (row > 1) {
-                log.warn("IN save - Сохранение " + entity + " затронуло другие записи.");
+                log.warn("IN save - SAVE " + entity + " affected other notes.");
             }
             try (ResultSet rs = stmt.getGeneratedKeys()) {
                 if (rs.next()) {
                     entity.setId(rs.getLong(1));
-                    log.info("IN - save - Добавлена новая запись " + entity);
+                    log.info("IN - save - Added new note " + entity);
                 } else
-                    throw new SQLException("Сохранение прошло успешно, но не удалось получить id для записи " + entity);
+                    throw new SQLException("The save was successful, but could not get the id for the note " + entity);
             }
         } catch (SQLException e) {
             log.warn("IN - save - " + e.getMessage());
@@ -87,10 +87,10 @@ public class LabelRepositoryImpl implements LabelRepository {
         try (Statement st = DBUtils.getStatement()) {
             int isUpdated = st.executeUpdate(String.format(DBUtils.UPDATE_LABEL, label.getName(), label.getId()));
             if (isUpdated == 1) {
-                log.info("IN - Labels(update) - Запись обновлена на " + label);
+                log.info("IN - Labels(update) - Note updated to " + label);
                 return label;
             } else {
-                log.warn("Запись " + label + " не обновлена.");
+                log.warn("Note " + label + " not updated.");
             }
         } catch (SQLException e) {
             log.error("IN - Labels(update) - " + e.getMessage());
