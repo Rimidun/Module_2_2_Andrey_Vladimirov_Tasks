@@ -2,13 +2,13 @@ package project.controller;
 
 import project.entity.Writer;
 import project.service.WriterService;
-import project.service.implementation.WriterServiceImpl;
+import project.service.implementation.JdbcWriterServiceImpl;
 
 public class WriterController {
     private final WriterService writerService;
 
     public WriterController() {
-        this.writerService = new WriterServiceImpl();
+        this.writerService = new JdbcWriterServiceImpl();
     }
 
     public Writer save(Writer writer){

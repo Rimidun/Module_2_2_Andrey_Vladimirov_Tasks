@@ -9,7 +9,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import project.entity.Post;
-import project.service.implementation.PostServiceImpl;
+import project.service.implementation.JdbcPostServiceImpl;
 
 import java.util.Date;
 import java.util.List;
@@ -21,7 +21,7 @@ class PostServiceImplementationTest {
 
     @Spy
     @InjectMocks
-    private PostServiceImpl postService;
+    private JdbcPostServiceImpl postService;
 
     @BeforeEach
     void setUp() {

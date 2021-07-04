@@ -15,12 +15,12 @@ import project.service.UserService;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class UserServiceImpl implements UserService {
+public class JdbcUserServiceImpl implements UserService {
     private final LabelRepository labelRepository;
     private final PostRepository postRepository;
     private final WriterRepository writerRepository;
 
-    public UserServiceImpl() {
+    public JdbcUserServiceImpl() {
         this.labelRepository = new JdbcLabelRepositoryImpl();
         this.postRepository = new JdbcPostRepositoryImpl();
         this.writerRepository = new JdbcWriterRepositoryImpl();

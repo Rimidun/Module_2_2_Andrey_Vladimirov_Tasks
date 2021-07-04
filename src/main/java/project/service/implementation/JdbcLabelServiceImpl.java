@@ -5,10 +5,10 @@ import project.repository.LabelRepository;
 import project.repository.implementation.JdbcLabelRepositoryImpl;
 import project.service.LabelService;
 
-public class LabelServiceImpl implements LabelService {
+public class JdbcLabelServiceImpl implements LabelService {
     private final LabelRepository labelRepository;
 
-    public LabelServiceImpl() {
+    public JdbcLabelServiceImpl() {
         this.labelRepository =  new JdbcLabelRepositoryImpl();
     }
 

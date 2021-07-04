@@ -2,7 +2,7 @@ package project.controller;
 
 import project.entity.Post;
 import project.service.PostService;
-import project.service.implementation.PostServiceImpl;
+import project.service.implementation.JdbcPostServiceImpl;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public class PostController {
     private final PostService postService;
 
     public PostController() {
-        this.postService = new PostServiceImpl();
+        this.postService = new JdbcPostServiceImpl();
     }
 
     public Post save(Post post){

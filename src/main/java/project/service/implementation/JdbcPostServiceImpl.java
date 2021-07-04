@@ -7,10 +7,10 @@ import project.service.PostService;
 
 import java.util.List;
 
-public class PostServiceImpl implements PostService {
+public class JdbcPostServiceImpl implements PostService {
     private final PostRepository postRepository;
 
-    public PostServiceImpl() {
+    public JdbcPostServiceImpl() {
         this.postRepository = new JdbcPostRepositoryImpl();
     }
 

@@ -9,7 +9,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import project.entity.Label;
-import project.service.implementation.LabelServiceImpl;
+import project.service.implementation.JdbcLabelServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +18,7 @@ public class LabelServiceImplementationTest {
 
     @Spy
     @InjectMocks
-    private LabelServiceImpl labelService;
+    private JdbcLabelServiceImpl labelService;
 
     @BeforeEach
     void setUp() {

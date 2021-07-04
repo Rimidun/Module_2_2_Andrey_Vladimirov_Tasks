@@ -11,7 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import project.entity.Label;
 import project.entity.Post;
 import project.entity.Writer;
-import project.service.implementation.WriterServiceImpl;
+import project.service.implementation.JdbcWriterServiceImpl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,7 +24,7 @@ class WriterServiceImplementationTest {
 
     @Spy
     @InjectMocks
-    private WriterServiceImpl writerService;
+    private JdbcWriterServiceImpl writerService;
 
     @BeforeEach
     void setUp() {

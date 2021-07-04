@@ -2,13 +2,13 @@ package project.controller;
 
 import project.entity.Label;
 import project.service.LabelService;
-import project.service.implementation.LabelServiceImpl;
+import project.service.implementation.JdbcLabelServiceImpl;
 
 public class LabelController {
     private final LabelService labelService;
 
     public LabelController() {
-        this.labelService = new LabelServiceImpl();
+        this.labelService = new JdbcLabelServiceImpl();
     }
 
     public Label get(Long id) {

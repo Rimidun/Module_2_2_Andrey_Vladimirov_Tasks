@@ -2,13 +2,13 @@ package project.controller;
 
 import project.entity.dto.WriterDto;
 import project.service.UserService;
-import project.service.implementation.UserServiceImpl;
+import project.service.implementation.JdbcUserServiceImpl;
 
 public class UserController {
     private final UserService userService;
 
     public UserController() {
-        this.userService = new UserServiceImpl();
+        this.userService = new JdbcUserServiceImpl();
     }
 
     public WriterDto save(WriterDto writerDto){

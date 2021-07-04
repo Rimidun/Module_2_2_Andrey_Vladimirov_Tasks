@@ -11,7 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import project.entity.Label;
 import project.entity.Post;
 import project.entity.dto.WriterDto;
-import project.service.implementation.UserServiceImpl;
+import project.service.implementation.JdbcUserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,7 +24,7 @@ class UserServiceImplementationTest {
 
     @Spy
     @InjectMocks
-    private UserServiceImpl userService;
+    private JdbcUserServiceImpl userService;
 
     private WriterDto testWriterDto;
     private List<Post> posts;

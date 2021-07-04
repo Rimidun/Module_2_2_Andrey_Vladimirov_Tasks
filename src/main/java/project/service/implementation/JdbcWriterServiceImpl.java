@@ -5,10 +5,10 @@ import project.repository.WriterRepository;
 import project.repository.implementation.JdbcWriterRepositoryImpl;
 import project.service.WriterService;
 
-public class WriterServiceImpl implements WriterService {
+public class JdbcWriterServiceImpl implements WriterService {
     private final WriterRepository writerRepository;
 
-    public WriterServiceImpl() {
+    public JdbcWriterServiceImpl() {
         this.writerRepository = new JdbcWriterRepositoryImpl();
     }
 
