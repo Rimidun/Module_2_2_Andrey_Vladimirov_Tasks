@@ -1,6 +1,6 @@
 package project.service;
 
-import project.entities.Writer;
+import project.entity.Writer;
 
 public interface WriterService {
     Writer get(Long id);

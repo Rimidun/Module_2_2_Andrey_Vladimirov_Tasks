@@ -1,6 +1,6 @@
-package project.controllers;
+package project.controller;
 
-import project.entities.Writer;
+import project.entity.Writer;
 import project.service.WriterService;
 import project.service.implementation.WriterServiceImpl;
 

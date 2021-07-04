@@ -1,8 +1,8 @@
 package project.service.implementation;
 
-import project.entities.Post;
+import project.entity.Post;
 import project.repository.PostRepository;
-import project.repository.implementation.PostRepositoryImpl;
+import project.repository.implementation.JdbcPostRepositoryImpl;
 import project.service.PostService;
 
 import java.util.List;
@@ -11,7 +11,7 @@ public class PostServiceImpl implements PostService {
     private final PostRepository postRepository;
 
     public PostServiceImpl() {
-        this.postRepository = new PostRepositoryImpl();
+        this.postRepository = new JdbcPostRepositoryImpl();
     }
 
     @Override

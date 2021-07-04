@@ -1,6 +1,6 @@
 package project.service;
 
-import project.entities.Post;
+import project.entity.Post;
 
 import java.util.List;
 

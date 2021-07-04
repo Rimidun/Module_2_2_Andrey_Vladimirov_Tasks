@@ -1,6 +1,6 @@
-package project.controllers;
+package project.controller;
 
-import project.entities.Post;
+import project.entity.Post;
 import project.service.PostService;
 import project.service.implementation.PostServiceImpl;
 

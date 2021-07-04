@@ -1,6 +1,6 @@
-package project.controllers;
+package project.controller;
 
-import project.entities.dto.WriterDto;
+import project.entity.dto.WriterDto;
 import project.service.UserService;
 import project.service.implementation.UserServiceImpl;
 

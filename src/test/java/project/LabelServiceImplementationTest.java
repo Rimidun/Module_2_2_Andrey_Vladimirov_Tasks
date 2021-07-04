@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import project.entities.Label;
+import project.entity.Label;
 import project.service.implementation.LabelServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;

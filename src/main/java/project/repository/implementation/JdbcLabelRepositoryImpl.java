@@ -1,6 +1,6 @@
 package project.repository.implementation;
 
-import project.entities.Label;
+import project.entity.Label;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.repository.DBUtils;
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class LabelRepositoryImpl implements LabelRepository {
+public class JdbcLabelRepositoryImpl implements LabelRepository {
     private final Logger log = LoggerFactory.getLogger("LabelRepositoryImpl");
 
     public Label save(Label entity) {

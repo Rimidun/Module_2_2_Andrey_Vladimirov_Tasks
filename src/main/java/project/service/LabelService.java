@@ -1,6 +1,6 @@
 package project.service;
 
-import project.entities.Label;
+import project.entity.Label;
 
 public interface LabelService {
     Label get(Long id);

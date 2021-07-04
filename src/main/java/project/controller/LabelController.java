@@ -1,6 +1,6 @@
-package project.controllers;
+package project.controller;
 
-import project.entities.Label;
+import project.entity.Label;
 import project.service.LabelService;
 import project.service.implementation.LabelServiceImpl;
 

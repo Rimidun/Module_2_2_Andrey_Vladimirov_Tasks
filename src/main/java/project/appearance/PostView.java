@@ -1,7 +1,7 @@
 package project.appearance;
 
-import project.controllers.PostController;
-import project.entities.Post;
+import project.controller.PostController;
+import project.entity.Post;
 
 import java.util.ArrayList;
 import java.util.List;

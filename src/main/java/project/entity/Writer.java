@@ -1,4 +1,4 @@
-package project.entities;
+package project.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

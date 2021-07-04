@@ -1,7 +1,7 @@
 package project.repository;
 
 
-import project.ObjectFactory;
+import project.ConnectionUtils;
 
 
 import java.sql.SQLException;
@@ -57,7 +57,7 @@ public class DBUtils {
 
 
     public static Statement getStatement() throws SQLException {
-        return ObjectFactory.getInstance()
+        return ConnectionUtils.getInstance()
                 .getStatement();
     }
 }

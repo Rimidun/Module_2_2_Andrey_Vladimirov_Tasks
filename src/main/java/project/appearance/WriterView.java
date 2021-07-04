@@ -1,11 +1,11 @@
 package project.appearance;
 
-import project.controllers.UserController;
-import project.controllers.WriterController;
-import project.entities.Label;
-import project.entities.Post;
-import project.entities.Writer;
-import project.entities.dto.WriterDto;
+import project.controller.UserController;
+import project.controller.WriterController;
+import project.entity.Label;
+import project.entity.Post;
+import project.entity.Writer;
+import project.entity.dto.WriterDto;
 
 import java.util.ArrayList;
 import java.util.List;

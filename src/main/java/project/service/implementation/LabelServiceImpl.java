@@ -1,15 +1,15 @@
 package project.service.implementation;
 
-import project.entities.Label;
+import project.entity.Label;
 import project.repository.LabelRepository;
-import project.repository.implementation.LabelRepositoryImpl;
+import project.repository.implementation.JdbcLabelRepositoryImpl;
 import project.service.LabelService;
 
 public class LabelServiceImpl implements LabelService {
     private final LabelRepository labelRepository;
 
     public LabelServiceImpl() {
-        this.labelRepository =  new LabelRepositoryImpl();
+        this.labelRepository =  new JdbcLabelRepositoryImpl();
     }
 
     @Override

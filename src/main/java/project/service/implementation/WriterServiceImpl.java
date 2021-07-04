@@ -1,15 +1,15 @@
 package project.service.implementation;
 
-import project.entities.Writer;
+import project.entity.Writer;
 import project.repository.WriterRepository;
-import project.repository.implementation.WriterRepositoryImpl;
+import project.repository.implementation.JdbcWriterRepositoryImpl;
 import project.service.WriterService;
 
 public class WriterServiceImpl implements WriterService {
     private final WriterRepository writerRepository;
 
     public WriterServiceImpl() {
-        this.writerRepository = new WriterRepositoryImpl();
+        this.writerRepository = new JdbcWriterRepositoryImpl();
     }
 
     @Override

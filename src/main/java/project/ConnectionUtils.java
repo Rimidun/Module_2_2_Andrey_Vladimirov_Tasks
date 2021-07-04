@@ -10,14 +10,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-public final class ObjectFactory {
+public final class ConnectionUtils {
 
     private final Logger log = LoggerFactory.getLogger("project.ObjectFactory");
-    private static ObjectFactory INSTANCE = null;
+    private static ConnectionUtils INSTANCE = null;
     private final Properties props;
     private final Map<String, Object> context;
 
-    private ObjectFactory() {
+    private ConnectionUtils() {
         Properties props = new Properties();
         try (InputStream is = ClassLoader.getSystemResourceAsStream("application.properties")) {
             props.load(is);
@@ -29,11 +29,11 @@ public final class ObjectFactory {
         this.context = new HashMap<>();
     }
 
-    public static ObjectFactory getInstance() {
+    public static ConnectionUtils getInstance() {
         if (INSTANCE == null) {
-            synchronized (ObjectFactory.class) {
+            synchronized (ConnectionUtils.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new ObjectFactory();
+                    INSTANCE = new ConnectionUtils();
                 }
             }
         }

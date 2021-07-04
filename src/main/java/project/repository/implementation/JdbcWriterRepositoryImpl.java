@@ -1,8 +1,8 @@
 package project.repository.implementation;
 
-import project.entities.Label;
-import project.entities.Post;
-import project.entities.Writer;
+import project.entity.Label;
+import project.entity.Post;
+import project.entity.Writer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.repository.DBUtils;
@@ -14,7 +14,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WriterRepositoryImpl implements WriterRepository {
+public class JdbcWriterRepositoryImpl implements WriterRepository {
     private final Logger log = LoggerFactory.getLogger("WriterRepositoryImpl");
 
     @Override

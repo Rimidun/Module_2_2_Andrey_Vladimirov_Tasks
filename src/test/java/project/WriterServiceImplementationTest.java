@@ -8,9 +8,9 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import project.entities.Label;
-import project.entities.Post;
-import project.entities.Writer;
+import project.entity.Label;
+import project.entity.Post;
+import project.entity.Writer;
 import project.service.implementation.WriterServiceImpl;
 
 import java.util.ArrayList;

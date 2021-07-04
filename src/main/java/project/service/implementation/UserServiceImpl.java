@@ -1,15 +1,15 @@
 package project.service.implementation;
 
-import project.entities.Label;
-import project.entities.Post;
-import project.entities.Writer;
-import project.entities.dto.WriterDto;
+import project.entity.Label;
+import project.entity.Post;
+import project.entity.Writer;
+import project.entity.dto.WriterDto;
 import project.repository.LabelRepository;
 import project.repository.PostRepository;
 import project.repository.WriterRepository;
-import project.repository.implementation.LabelRepositoryImpl;
-import project.repository.implementation.PostRepositoryImpl;
-import project.repository.implementation.WriterRepositoryImpl;
+import project.repository.implementation.JdbcLabelRepositoryImpl;
+import project.repository.implementation.JdbcPostRepositoryImpl;
+import project.repository.implementation.JdbcWriterRepositoryImpl;
 import project.service.UserService;
 
 import java.util.List;
@@ -21,9 +21,9 @@ public class UserServiceImpl implements UserService {
     private final WriterRepository writerRepository;
 
     public UserServiceImpl() {
-        this.labelRepository = new LabelRepositoryImpl();
-        this.postRepository = new PostRepositoryImpl();
-        this.writerRepository = new WriterRepositoryImpl();
+        this.labelRepository = new JdbcLabelRepositoryImpl();
+        this.postRepository = new JdbcPostRepositoryImpl();
+        this.writerRepository = new JdbcWriterRepositoryImpl();
     }
 
     @Override

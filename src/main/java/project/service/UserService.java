@@ -1,6 +1,6 @@
 package project.service;
 
-import project.entities.dto.WriterDto;
+import project.entity.dto.WriterDto;
 
 public interface UserService {
     WriterDto save(WriterDto writerDto);
