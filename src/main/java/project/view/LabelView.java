@@ -1,4 +1,4 @@
-package project.appearance;
+package project.view;
 
 import project.controller.LabelController;
 import project.entity.Label;

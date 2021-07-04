@@ -1,6 +1,6 @@
 package project;
 
-import project.appearance.UserMenu;
+import project.view.UserMenu;
 
 public class Application {
     public static void main(String[] args) {
