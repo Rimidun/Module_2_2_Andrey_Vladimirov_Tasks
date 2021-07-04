@@ -16,6 +16,7 @@ public class Post {
     private Date created;
     private Date updated;
 
+
     public Post(Long writersId, String content) {
         this.id = null;
         this.writersId = writersId;
