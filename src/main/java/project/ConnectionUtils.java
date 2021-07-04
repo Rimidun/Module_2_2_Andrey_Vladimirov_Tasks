@@ -12,7 +12,7 @@ import java.util.Properties;
 
 public final class ConnectionUtils {
 
-    private final Logger log = LoggerFactory.getLogger("project.ObjectFactory");
+    private final Logger log = LoggerFactory.getLogger("project.ConnectionUtils");
     private static ConnectionUtils INSTANCE = null;
     private final Properties props;
     private final Map<String, Object> context;
