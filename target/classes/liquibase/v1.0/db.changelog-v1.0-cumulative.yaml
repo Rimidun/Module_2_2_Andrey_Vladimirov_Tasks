@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: release-1.0.0
+      author: Andrey
+      changes:
+        - tagDatabase:
+            tag: 1.0.0
+  - changeSet:
+      id: 1.0.1
+      author: Andrey
+      comment: Create tables the `writers` `posts` `labels`
+      logicalFilePath: liquibase/v1.0/db.changelog-intial-DB.sql
+      changes:
+        - sqlFile:
+            path: db.changelog-intial-DB.sql
+            relativeToChangelogFile: true
+      rollback:
+        - dropTable:
+            tableName: writers
+        - dropTable:
+            tableName: posts
+        - dropTable:
+            tableName: labels
+  - changeSet:
+      id: release-1.0.1
+      author: Andrey
+      changes:
+        - tagDatabase:
+            tag: 1.0.1
+  - changeSet:
+      id: 1.0.2
+      author: Andrey
+      comment: Create Foriegn Key
+      logicalFilePath: liquibase/v1.0/db.changelog-set-constraints.sql
+      changes:
+        - sqlFile:
+            path: db.changelog-set-constraints.sql
+            relativeToChangelogFile: true
+      rollback: ALTER TABLE `writers` DROP FOREIGN KEY fk_writers_labels;
+        ALTER TABLE `posts` DROP FOREIGN KEY fk_posts_writers;
+  - changeSet:
+      id: release-1.0.2
+      author: Andrey
+      changes:
+        - tagDatabase:
+            tag: 1.0.2
