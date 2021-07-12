@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class DBUtils {
 
-    private final Logger log = LoggerFactory.getLogger("project.DBUtils");
+    private final Logger log = LoggerFactory.getLogger("project.repository.DBUtils");
     private static DBUtils INSTANCE = null;
     private final Properties props;
     private final Map<String, Object> context;
